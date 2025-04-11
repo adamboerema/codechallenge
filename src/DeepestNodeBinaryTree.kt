@@ -1,3 +1,5 @@
+import common.TreeNode
+
 // https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/
 
 /**
@@ -11,10 +13,7 @@
  * }
  */
 
-data class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
-}
 
 fun lcaDeepestLeaves(root: TreeNode?): TreeNode? {
+    return null
 }
