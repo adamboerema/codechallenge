@@ -24,7 +24,7 @@ fun maxDepth(root: TreeNode?): Int {
     return max(leftDepth, rightDepth)
 }
 
-fun findMaxDepth(node: TreeNode?, maxDepth: Int) : Int {
+private fun findMaxDepth(node: TreeNode?, maxDepth: Int) : Int {
     if(node == null) {
         return maxDepth
     }

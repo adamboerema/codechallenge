@@ -1,4 +1,5 @@
 import common.TreeNode
+import kotlin.math.max
 
 // https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/
 
@@ -13,7 +14,16 @@ import common.TreeNode
  * }
  */
 
-
 fun lcaDeepestLeaves(root: TreeNode?): TreeNode? {
     return null
+}
+
+private fun findMaxDepth(node: TreeNode?, maxDepth: Int) : Int {
+    if(node == null) {
+        return maxDepth
+    }
+
+    val leftCurrentDepth = findMaxDepth(node.left, maxDepth + 1)
+    val rightCurrentDepth = findMaxDepth(node.right, maxDepth + 1)
+    return max(leftCurrentDepth, rightCurrentDepth)
 }
